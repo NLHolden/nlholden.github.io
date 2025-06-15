@@ -11,6 +11,7 @@ baseurl:             ''
 paginate:            5
 
 version:             1.0.0
+
 theme: minima
 
 minima:
