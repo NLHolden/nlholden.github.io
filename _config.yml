@@ -10,13 +10,6 @@ url:                 http://nlholden.github.io
 baseurl:             ''
 paginate:            5
 
-# About/contact
-author:
-  name:              Holden Caulfield
-  url:               https://github.com/nlholden
-  email:             holden.caulfield4471@gmail.com
-
-# Custom vars
 version:             1.0.0
 theme: minima
 
