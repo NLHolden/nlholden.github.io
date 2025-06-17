@@ -1,13 +1,12 @@
-permalink:           pretty
-plugins: [jekyll-paginate]
+permalink: pretty
+plugins:
+  - jekyll-paginate
+
 paginate: 5
 paginate_path: "page:num"
 
-title:               Holden Caulfield
-tagline:             ''
-description:         ''
-url:                 http://nlholden.github.io
-baseurl:             ''
-paginate:            5
-
-version:             1.0.0
+title: Holden Caulfield
+description: ''
+url: http://nlholden.github.io
+baseurl: ''
+version: 1.0.0
