@@ -1,4 +1,4 @@
 {:.profile}
 ![banner](banner.png)
 
-Hey there!
+Μέτριος Quant, Χειρότερος χαρτοπαίκτης.
