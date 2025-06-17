@@ -1,5 +1,13 @@
-remote_theme: jekyll/minima
-plugins:
-  - jekyll-remote-theme
-minima:
-  skin: dark 
+permalink:           pretty
+plugins: [jekyll-paginate]
+paginate: 5
+paginate_path: "page:num"
+
+title:               Holden Caulfield
+tagline:             ''
+description:         ''
+url:                 http://nlholden.github.io
+baseurl:             ''
+paginate:            5
+
+version:             1.0.0
