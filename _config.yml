@@ -3,12 +3,6 @@ plugins: [jekyll-paginate]
 paginate: 5
 paginate_path: "page:num"
 
-remote_theme: jekyll/minima
-plugins:
-  - jekyll-remote-theme
-minima:
-  skin: dark # or auto if you want it to switch with your system settings.
-
 title:               Holden Caulfield
 tagline:             ''
 description:         ''
@@ -18,3 +12,7 @@ paginate:            5
 
 version:             1.0.0
 
+theme: minima
+
+minima:
+  skin: dark
