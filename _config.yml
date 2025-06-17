@@ -12,7 +12,7 @@ paginate:            5
 
 version:             1.0.0
 
-theme: minima
+remote_theme: jekyll/minima
 
 minima:
   skin: dark
