@@ -429,7 +429,8 @@ a.pagination-item:hover {
   }
 }
 
- /* === Custom Dark Theme Overrides === */
+/* === FULL DARK THEME OVERRIDES === */
+
 body {
   background-color: #121212;
   color: #e0e0e0;
@@ -439,19 +440,49 @@ a {
   color: #82aaff;
 }
 
+a:hover {
+  color: #c792ea;
+}
+
 .site-header,
 .site-footer {
   background-color: #1e1e1e;
   color: #e0e0e0;
+  border-color: #333;
+}
+
+.site-nav a {
+  color: #e0e0e0;
+}
+
+.site-nav a:hover {
+  color: #82aaff;
+}
+
+.post-title a {
+  color: #ffffff;
+}
+
+.post-date {
+  color: #aaaaaa;
 }
 
 code, pre {
   background-color: #2a2a2a;
   color: #e6e6e6;
+  border: 1px solid #444;
 }
 
-/* Optional: darker borders and cards */
-hr,
-.border {
+hr, .border {
   border-color: #444;
+}
+
+.pagination-item {
+  background-color: #1e1e1e;
+  color: #e0e0e0;
+  border: 1px solid #333;
+}
+
+.pagination-item:hover {
+  background-color: #2a2a2a;
 }
