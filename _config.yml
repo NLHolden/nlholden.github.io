@@ -1,3 +1,9 @@
+remote_theme: jekyll/minima
+plugins:
+  - jekyll-remote-theme
+minima:
+  skin: dark 
+
 permalink:           pretty
 plugins: [jekyll-paginate]
 paginate: 5
@@ -11,8 +17,3 @@ baseurl:             ''
 paginate:            5
 
 version:             1.0.0
-
-theme: minima
-
-minima:
-  skin: dark
