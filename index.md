@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 {:.profile}
-![banner](banner.png)
+![banner](graphics/banner.png)
 
 Μέτριος Quant, Χειρότερος χαρτοπαίκτης.
 
