@@ -40,4 +40,11 @@
 ├── graphics/           # Manim animations & figures
 ├── public/             # Static files (e.g. favicon, CSS)
 ├── index.md            # Homepage content
+├── contact.md          # Contact page content
 ├── _config.yml         # Jekyll configuration
+├── favicon.ico         # website icon
+├── Gemfile             # Jekyll requirements
+├── Gemfile.lock        # Jekyll requirements
+├── LICENSE.md          # MIT license file
+├── privacy-policy.md   # Privacy policy page content
+├── README.md           # This file
