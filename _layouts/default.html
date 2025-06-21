@@ -1,49 +1,129 @@
+<!-- _layouts/default.html -->
 <!DOCTYPE html>
-<html lang="en-us">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-
-
-  {% include head.html %}
-
-  <body>
-
-    {% include sidebar.html %}
-
-    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
-         content to avoid any CSS collisions with our real content. -->
-    <div class="wrap">
-      <div class="masthead">
-        <div class="container">
-          <h3 class="masthead-title">
-            <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
-            <small>{{ site.tagline }}</small>
-          </h3>
-        </div>
-      </div>
-
-      <div class="container content">
-        {{ content }}
-      </div>
-    </div>
-
-    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-
+<html lang="el">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{{ page.title }} | NLHolden</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
-      (function(document) {
-        var toggle = document.querySelector('.sidebar-toggle');
-        var sidebar = document.querySelector('#sidebar');
-        var checkbox = document.querySelector('#sidebar-checkbox');
-
-        document.addEventListener('click', function(e) {
-          var target = e.target;
-
-          if(!checkbox.checked ||
-             sidebar.contains(target) ||
-             (target === checkbox || target === toggle)) return;
-
-          checkbox.checked = false;
-        }, false);
-      })(document);
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: '#121212',
+              surface: '#1e1e1e',
+              text: '#e0e0e0',
+              accent: '#4f46e5'
+            },
+            spacing: {
+              'section': '4rem',
+              'container': '1.5rem',
+              'paragraph': '2.25rem'
+            },
+            lineHeight: {
+              relaxed: '1.75',
+              loose: '2.2'
+            }
+          }
+        }
+      }
     </script>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        options: {
+          renderActions: {
+            addMenu: []
+          }
+        },
+        svg: { fontCache: 'global' },
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+    <style>
+      .prose a {
+        color: #4f46e5;
+        text-decoration: underline;
+        transition: color 0.3s;
+      }
+
+      .prose a:hover {
+        color: white;
+      }
+    </style>
+    <style>
+      /* Extra spacing between paragraphs */
+      .prose p + p {
+        margin-top: 0.9rem;
+      }
+
+      mjx-container[jax="SVG"][display="true"] {
+        display: block;
+        text-align: center;
+        margin: 1em 0;
+      }
+
+      mjx-container[jax="SVG"][display="false"] {
+        display: inline;
+        margin: 0;
+        padding: 0;
+      }
+
+    </style>
+
+
+  </head>
+  <body class="bg-background text-text font-sans leading-relaxed">
+    <!-- Header -->
+    <header class="bg-surface border-b border-gray-700 py-6">
+      <nav class="container mx-auto flex justify-between items-center px-6">
+        <a href="/" class="text-2xl font-semibold text-white">NLHolden</a>
+        <ul class="flex space-x-6 text-base">
+          <li><a href="/blog/" class="hover:text-accent text-gray-300">Μαθηματικά για Τζογαδόρους</a></li>
+          <li><a href="/contact/" class="hover:text-accent text-gray-300">Επικοινωνία</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main content -->
+    <main class="prose prose-invert prose-lg max-w-3xl mx-auto px-4">
+      {{ content }}
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center text-gray-500 text-sm py-8 border-t border-gray-700">
+      © {{ site.time | date: "%Y" }} NLHolden. Χτισμένο με Jekyll και Tailwind.
+    </footer>
+
+  <!-- Cookie Consent -->
+  <div id="cookie-banner" class="fixed bottom-0 inset-x-0 bg-gray-900 text-white text-sm p-4 shadow-lg z-50 flex items-center justify-between">
+    <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+      <span>Αυτός ο ιστότοπος χρησιμοποιεί cookies για να διασφαλίσει την καλύτερη εμπειρία χρήσης.</span>
+      <a href="/privacy-policy" class="underline hover:text-accent transition">Περισσότερα</a>
+    </div>
+    <button id="accept-cookies" class="bg-accent text-white px-4 py-2 rounded hover:bg-indigo-600 transition ml-4">
+      Αποδοχή
+    </button>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const banner = document.getElementById("cookie-banner");
+      const acceptBtn = document.getElementById("accept-cookies");
+
+      if (localStorage.getItem("cookies-accepted")) {
+        banner.style.display = "none";
+      }
+
+      acceptBtn.addEventListener("click", () => {
+        localStorage.setItem("cookies-accepted", "true");
+        banner.style.display = "none";
+      });
+    });
+  </script>
   </body>
 </html>
