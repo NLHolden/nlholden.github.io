@@ -2,7 +2,22 @@
 layout: default
 ---
 
+<style>
+  .prose a {
+    color: #4f46e5;
+    text-decoration: underline;
+    transition: color 0.3s;
+  }
+
+  .prose a:hover {
+    color: white;
+  }
+</style>
+
 <div class="page">
-  <h1 class="page-title">{{ page.title }}</h1>
-  {{ content }}
+<div class="text-center my-8">
+  <h1 class="text-4xl font-bold">{{ page.title }}</h1>
+</div>
+
+{{ content }}
 </div>
