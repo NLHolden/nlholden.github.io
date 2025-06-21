@@ -1,145 +1,151 @@
+<!-- _layouts/default.html -->
 <!DOCTYPE html>
-<html lang="en-us">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-
-
+<html lang="el">
   <head>
-  <link href="http://gmpg.org/xfn/11" rel="profile">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="content-type" content="text/html; charset=utf-8">
-
-  <!-- Enable responsiveness on mobile devices-->
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-
-  <title>
-    
-      Holden Caulfield &middot; 
-    
-  </title>
-
-  <!-- CSS -->
-  <link rel="stylesheet" href="/public/css/poole.css">
-  <link rel="stylesheet" href="/public/css/syntax.css">
-  <link rel="stylesheet" href="/public/css/lanyon.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700%7CPT+Sans:400">
-
-  <!-- Icons -->
-  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/public/apple-touch-icon-precomposed.png">
-  <link rel="shortcut icon" href="/public/favicon.ico">
-
-  <!-- RSS -->
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
-</head>
-
-
-  <body>
-
-    <!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
-     styles, `#sidebar-checkbox` for behavior. -->
-    <link rel="stylesheet" href="/public/css/poole.css">
-    <link rel="stylesheet" href="/public/css/syntax.css">
-    <link rel="stylesheet" href="/public/css/lanyon.css">
-    
-    <input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
-
-
-     <!-- Toggleable sidebar -->
-     <div class="sidebar" id="sidebar">
-       <div class="sidebar-item">
-           <center class="side-links">
-               <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-             <style>
-             .fa {
-                 padding: 20px;
-                 font-size: 30px;
-                 width: 50px;
-                 text-align: center;
-                 text-decoration: none;
-                 border-radius: 50%;
-             }
-     
-             .fa:hover {
-                 opacity: 0.7;
-             }
-     
-             </style>
-
-            </center>
-       </div>
-     
-       <nav class="sidebar-nav">
-         <a class="sidebar-nav-item" href="/">Home</a>
-         <nav class="sidebar-nav">
-          <a class="sidebar-nav-item" href="/blog">Μαθηματικά για Τζογαδόρους</a>
-         
-     
-         
-         
-           
-             
-           
-         
-           
-         
-           
-         
-           
-             
-           
-         
-           
-         
-     
-     
-       </nav>
-     
-       <div class="sidebar-item">
-         <p>
-           &copy; 2025. All rights reserved.
-         </p>
-       </div>
-     </div>
-
-    <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
-         content to avoid any CSS collisions with our real content. -->
-    <div class="wrap">
-      <div class="masthead">
-        <div class="container">
-          <h3 class="masthead-title">
-            <a href="/" title="Home">Holden Caulfield</a>
-            <small></small>
-          </h3>
-        </div>
-      </div>
-
-      <div class="container content">
-        <p class="profile"><img src="graphics/banner.png" alt="banner" /></p>
-
-<p>Μέτριος Quant, Χειρότερος χαρτοπαίκτης.</p>
-
-<p>Με λένε Holden και μιλάω για τον κόσμο της τυχαιότητας.</p>
-
-      </div>
-    </div>
-
-    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
-
+    <meta charset="UTF-8" />
+    <title>Home | NLHolden</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
-      (function(document) {
-        var toggle = document.querySelector('.sidebar-toggle');
-        var sidebar = document.querySelector('#sidebar');
-        var checkbox = document.querySelector('#sidebar-checkbox');
-
-        document.addEventListener('click', function(e) {
-          var target = e.target;
-
-          if(!checkbox.checked ||
-             sidebar.contains(target) ||
-             (target === checkbox || target === toggle)) return;
-
-          checkbox.checked = false;
-        }, false);
-      })(document);
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              background: '#121212',
+              surface: '#1e1e1e',
+              text: '#e0e0e0',
+              accent: '#4f46e5'
+            },
+            spacing: {
+              'section': '4rem',
+              'container': '1.5rem',
+              'paragraph': '2.25rem'
+            },
+            lineHeight: {
+              relaxed: '1.75',
+              loose: '2.2'
+            }
+          }
+        }
+      }
     </script>
+    <script>
+      window.MathJax = {
+        tex: {
+          inlineMath: [['$', '$'], ['\\(', '\\)']],
+          displayMath: [['$$', '$$'], ['\\[', '\\]']]
+        },
+        options: {
+          renderActions: {
+            addMenu: []
+          }
+        },
+        svg: { fontCache: 'global' },
+      };
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js" async></script>
+    <style>
+      .prose a {
+        color: #4f46e5;
+        text-decoration: underline;
+        transition: color 0.3s;
+      }
+
+      .prose a:hover {
+        color: white;
+      }
+    </style>
+    <style>
+      /* Extra spacing between paragraphs */
+      .prose p + p {
+        margin-top: 0.9rem;
+      }
+
+      mjx-container[jax="SVG"][display="true"] {
+        display: block;
+        text-align: center;
+        margin: 1em 0;
+      }
+
+      mjx-container[jax="SVG"][display="false"] {
+        display: inline;
+        margin: 0;
+        padding: 0;
+      }
+
+    </style>
+
+
+  </head>
+  <body class="bg-background text-text font-sans leading-relaxed">
+    <!-- Header -->
+    <header class="bg-surface border-b border-gray-700 py-6">
+      <nav class="container mx-auto flex justify-between items-center px-6">
+        <a href="/" class="text-2xl font-semibold text-white">NLHolden</a>
+        <ul class="flex space-x-6 text-base">
+          <li><a href="/blog/" class="hover:text-accent text-gray-300">Μαθηματικά για Τζογαδόρους</a></li>
+          <li><a href="/contact/" class="hover:text-accent text-gray-300">Επικοινωνία</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- Main content -->
+    <main class="prose prose-invert prose-lg max-w-3xl mx-auto px-4">
+      <p class="profile"><img src="graphics/banner.png" alt="banner" /></p>
+
+<p>Ένας μέτριος Quant. Με λένε Holden και μιλάω για τον κόσμο της τυχαιότητας.</p>
+
+<h2 id="-jupyterlab--try-the-code">🧪 JupyterLab – Try the Code</h2>
+
+<p>Όλο το περιεχόμενο που δημιουργείται για αυτό το site — από τα κείμενα και τα βίντεο, μέχρι τα animation και τον κώδικα των προσομοιώσεων — είναι ανοιχτού κώδικα. Αν θέλεις να δεις πώς φτιάχνονται τα επεισόδια, να μελετήσεις ή να τροποποιήσεις τον κώδικα, ή ακόμα και να συνεισφέρεις με προτάσεις ή βελτιώσεις, μπορείς να επισκεφτείς το προφίλ μου στο <a href="https://github.com/NLHolden">Github</a> ή να πειραματιστείς απευθείας ανοίγοντας τα notebooks από τον browser:</p>
+
+<p>🔗 <a href="https://nlholden.github.io/jupyterlite-deployment/lab/index.html"><strong>Open in JupyterLab (JupyterLite)</strong></a></p>
+
+<blockquote>
+  <p>✅ Δεν απαιτείται εγκατάσταση – όλα τρέχουν client-side, στο browser σου.</p>
+</blockquote>
+
+<h2 id="-tech-stack">🛠 Tech Stack</h2>
+
+<ul>
+  <li><strong><a href="https://jekyllrb.com/">Jekyll</a>:</strong> Static site generator</li>
+  <li><strong><a href="https://www.manim.community/">Manim</a>:</strong> Mathematical animations (Python)</li>
+  <li><strong><a href="https://jupyterlite.readthedocs.io/">JupyterLite</a>:</strong> Interactive notebooks in the browser</li>
+  <li><strong><a href="https://pages.github.com/">GitHub Pages</a>:</strong> Hosting &amp; deployment</li>
+</ul>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center text-gray-500 text-sm py-8 border-t border-gray-700">
+      © 2025 NLHolden. Χτισμένο με Jekyll και Tailwind.
+    </footer>
+
+  <!-- Cookie Consent -->
+  <div id="cookie-banner" class="fixed bottom-0 inset-x-0 bg-gray-900 text-white text-sm p-4 shadow-lg z-50 flex items-center justify-between">
+    <div class="max-w-4xl mx-auto flex flex-col sm:flex-row items-center gap-2 sm:gap-4">
+      <span>Αυτός ο ιστότοπος χρησιμοποιεί cookies για να διασφαλίσει την καλύτερη εμπειρία χρήσης.</span>
+      <a href="/privacy-policy" class="underline hover:text-accent transition">Περισσότερα</a>
+    </div>
+    <button id="accept-cookies" class="bg-accent text-white px-4 py-2 rounded hover:bg-indigo-600 transition ml-4">
+      Αποδοχή
+    </button>
+  </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const banner = document.getElementById("cookie-banner");
+      const acceptBtn = document.getElementById("accept-cookies");
+
+      if (localStorage.getItem("cookies-accepted")) {
+        banner.style.display = "none";
+      }
+
+      acceptBtn.addEventListener("click", () => {
+        localStorage.setItem("cookies-accepted", "true");
+        banner.style.display = "none";
+      });
+    });
+  </script>
   </body>
 </html>
