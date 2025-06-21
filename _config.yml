@@ -1,3 +1,5 @@
+lang: el
+
 theme: minima
 permalink: pretty
 plugins:
