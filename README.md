@@ -1,4 +1,4 @@
-# 🧠 NLHolden.github.io
+# NLHolden.github.io
 
 Το site είναι φτιαγμένο με [Jekyll](https://jekyllrb.com/), εμπλουτισμένο με animations μέσω [Manim](https://www.manim.community/) και περιέχει διαδραστικό Python code μέσω του [JupyterLite](https://jupyterlite.readthedocs.io/en/latest/), που τρέχει απευθείας στον browser.
 
