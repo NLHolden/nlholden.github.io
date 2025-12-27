@@ -16,7 +16,7 @@ pagination:
   sort_field: 'date'
   sort_reverse: true
 
-title: Holden Caulfield
+title: NLHolden
 description: ''
 url: http://nlholden.github.io
 baseurl: ''
